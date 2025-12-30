@@ -1,5 +1,26 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import onboarding1 from '../assets/onboarding1.svg'
+import onboarding2 from '../assets/onboarding2.svg'
+import onboarding3 from '../assets/onboarding3.svg'
+import { useEffect } from 'react'
+
+useEffect(() => {
+  // Push a fake state so back button does nothing
+  window.history.pushState(null, '', window.location.href)
+
+  const handlePopState = () => {
+    window.history.pushState(null, '', window.location.href)
+  }
+
+  window.addEventListener('popstate', handlePopState)
+
+  return () => {
+    window.removeEventListener('popstate', handlePopState)
+  }
+}, [])
+
+
 
 type OnboardingPage = {
   title: string
@@ -12,19 +33,19 @@ const pages: OnboardingPage[] = [
     title: 'Learn & Explore',
     description:
       'Discover interactive exhibits that explain sustainability concepts through hands-on exploration.',
-    image: '/onboarding1.svg',
+    image: onboarding1,
   },
   {
     title: 'Take Action',
     description:
       'Engage with real-world actions and challenges that encourage sustainable habits.',
-    image: '/onboarding2.svg',
+    image: onboarding2,
   },
   {
     title: 'Win & Reflect',
     description:
       'Complete all exhibits and reflect on what you learned about our shared future.',
-    image: '/onboarding3.svg',
+    image: onboarding3,
   },
 ]
 

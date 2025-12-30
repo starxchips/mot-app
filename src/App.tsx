@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Onboarding from './pages/Onboarding'
 import Home from './pages/Home'
 import ExhibitDetails from './pages/ExhibitDetails'
@@ -6,7 +6,7 @@ import Congratulations from './pages/Congratulations'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Onboarding />} />
         <Route path="/home" element={<Home />} />
@@ -16,7 +16,7 @@ function App() {
         {/* Fallback: unknown routes go to onboarding */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

@@ -1,5 +1,8 @@
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import exhibit1 from '../assets/exhibit1.jpg'
+import exhibit2 from '../assets/exhibit2.jpg'
+import exhibit3 from '../assets/exhibit3.jpg'
 
 type Exhibit = {
   id: number
@@ -14,21 +17,21 @@ const exhibits: Exhibit[] = [
     title: 'SIM Mateo',
     description:
       'Explore how a mini city balances clean and fossil energy choices.',
-    image: '/exhibit1.jpg',
+    image: exhibit1,
   },
   {
     id: 2,
     title: 'Exploring Wind Turbines',
     description:
       'Learn how wind turbines convert air movement into clean energy.',
-    image: '/exhibit2.jpg',
+    image: exhibit2,
   },
   {
     id: 3,
     title: 'Power of Recycling',
     description:
       'Discover how recycling reduces waste and protects natural resources.',
-    image: '/exhibit3.jpg',
+    image: exhibit3,
   },
 ]
 

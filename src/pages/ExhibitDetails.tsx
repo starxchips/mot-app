@@ -1,5 +1,9 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import exhibit1 from '../assets/exhibit1.jpg'
+import exhibit2 from '../assets/exhibit2.jpg'
+import exhibit3 from '../assets/exhibit3.jpg'
+
 
 type Exhibit = {
   id: number
@@ -9,28 +13,28 @@ type Exhibit = {
 }
 
 const exhibits: Exhibit[] = [
-  {
-    id: 1,
-    title: 'SIM Mateo',
-    description:
-      'Explore how a mini city balances clean and fossil energy choices.',
-    image: '/exhibit1.jpg',
-  },
-  {
-    id: 2,
-    title: 'Exploring Wind Turbines',
-    description:
-      'Learn how wind turbines convert air movement into clean energy.',
-    image: '/exhibit2.jpg',
-  },
-  {
-    id: 3,
-    title: 'Power of Recycling',
-    description:
-      'Discover how recycling reduces waste and protects natural resources.',
-    image: '/exhibit3.jpg',
-  },
-]
+    {
+      id: 1,
+      title: 'SIM Mateo',
+      description:
+        'Explore how a mini city balances clean and fossil energy choices.',
+      image: exhibit1,
+    },
+    {
+      id: 2,
+      title: 'Exploring Wind Turbines',
+      description:
+        'Learn how wind turbines convert air movement into clean energy.',
+      image: exhibit2,
+    },
+    {
+      id: 3,
+      title: 'Power of Recycling',
+      description:
+        'Discover how recycling reduces waste and protects natural resources.',
+      image: exhibit3,
+    },
+  ]  
 
 export default function ExhibitDetails() {
   const { id } = useParams()
@@ -210,7 +214,7 @@ export default function ExhibitDetails() {
                 fontSize: 14,
                 margin: 0,
                 color: '#555',
-                fontWeight: 300,
+                fontWeight: 500,
                 lineHeight: 1.5,
               }}
             >
