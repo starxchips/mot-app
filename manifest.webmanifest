@@ -1,0 +1,21 @@
+{
+    "name": "Museum of Tomorrow",
+    "short_name": "MoT",
+    "start_url": "/mot-app/",
+    "display": "standalone",
+    "background_color": "#faf7fb",
+    "theme_color": "#1c1c1c",
+    "icons": [
+      {
+        "src": "/mot-app/logo-bg.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/mot-app/logo-bg.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
